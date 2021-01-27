@@ -1,0 +1,41 @@
+﻿@model List<CategoryVM>
+    <table class="data-table cart-table">
+        <thead>
+            <tr>
+                <th> Id</th>
+                <th>CategoryName</th>
+                <th>Description</th>
+                <th>IsActive</th>
+                <th colspan="2"><button href="AddCategory.cshtml" class="btn btn-primary">Add</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (CategoryVM item in Model)
+            {
+                <tr>
+                    <td><span>@item.CategoryID</span></td>
+                    <td><span>@item.CategoryName</span></td>
+                    <td><span>@item.Description</span></td>
+                    <td><span>@item.IsActive</span></td>
+                    <td>
+                        <a class="btn btn-info" asp-area="Admin" asp-controller="Category" asp-action="Update" asp-route-id="@item.CategoryID" type="submit">Update</a>
+                    </td>
+                    <td>
+                        @if (!item.IsActive)
+                        {
+                            <button href="#" style="border-style:none" class="btn btn-warning" disabled  onclick="DeleteCategory(@item.CategoryID)">Delete</button>
+                        }
+                        else
+                        {
+                            <button style="border-style:none" href="#" class="btn btn-warning" onclick="DeleteCategory(@item.CategoryID)">Delete</button>
+                        }
+
+
+
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+

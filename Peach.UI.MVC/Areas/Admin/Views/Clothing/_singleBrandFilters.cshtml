@@ -1,0 +1,12 @@
+﻿@model List<BrandVM>
+
+
+<h3 class="wg-title2">Our Brand</h3>
+
+<ul class="product-categories">
+   
+        @foreach (BrandVM item in Model)
+        {
+        <li class="cat-item"> <a href="#" onclick="GetClothingByBrand(@item.BrandId)">@item.CompanyName</a></li>
+         }
+    </ul>

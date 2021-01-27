@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Peach.Core\Peach.Core.csproj" />
+    <ProjectReference Include="..\Peach.DAL\Peach.DAL.csproj" />
+    <ProjectReference Include="..\Peach.Model\Peach.Model.csproj" />
+  </ItemGroup>
+
+</Project>

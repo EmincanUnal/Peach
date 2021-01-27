@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Cart</h2>
+                    <p><a href="#">Home</a> Shopping Cart</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+
+<div class="container" id="sepet">
+    <partial name="_tableList" model="@Model" />
+</div>>
+
+@section scripts{
+    <script>
+        function CartUpdate(deger, cid) {
+            $.ajax({
+                type: "GET",
+                url: "/Cart/UpdateToCart",
+                data: { amount: deger, id: cid },
+                success: function (data) {
+                    $("#sepet").html(data);
+                }
+            })
+        }
+        function CartDelete(id) {
+            var answer = confirm("Ürünü silmek istiyor musunuz?")
+            if (answer) {
+                $.ajax({
+                    type: "GET",
+                    url: "/Cart/DeleteToCart",
+                    data: { id: cid },
+                    success: function (data) {
+                        $("#sepet").html(data);
+                    }
+
+                })
+            }
+            
+        }
+    </script>
+}

@@ -1,0 +1,50 @@
+﻿
+@model MyCart
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>SubTotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cartİtem item in Model.GetAllCartItem)
+        {
+            <tr>
+                <td><img src="@item.ClothesArtUrl" alt="" style="width:43px ;height:60px" /></td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td><input type="number" id="txtAmount" value="@item.Amount" min="0" onchange="CartUpdate(this.value, @item.ID)" /></td>
+
+                <td>@item.SubTotal</td>
+
+                <td><a href="Javascript:void(0)" class="btn btn-primary m-2" onclick="CartDelete(@item.ID)">DELETE</a></td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                TOTAL CART PRİCE
+            </td>
+            <td>
+                @(Model.GetAllCartItem.Sum(a => a.SubTotal).ToString("C2"))
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <a class="btn btn-primary m-2" asp-action="GetOrders" asp-controller="Cart" >Sepeti Onayla</a>
+
+            </td>
+            <td colspan="5">
+                <a class="btn btn-primary m-2" asp-action="Index" asp-controller="Home" >Alişverişe Devam</a>
+
+            </td>
+        </tr>
+    </tfoot>
+</table>

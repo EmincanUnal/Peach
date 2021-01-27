@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Details</h2>
+                    <p><a href="#">Clothing</a> Clothing Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div>
+    <div class="container-fluid mt-30 mb-50">
+        <div class="row">
+            <div class=" col-md-12">
+                <section class="pages products-page section-padding-top">
+                    <div class="col-md-1">
+                        <div class="all-shop-sidebar">
+                            <div class="top-shop-sidebar">
+                                <h3 class="wg-title">SHOP BY</h3>
+                            </div>
+                            <div class="shop-one" id="categoryfilters">
+                                categoriler gelecek
+                            </div>
+                            <br />
+                            <div class="shop-one" id="brandfilters">
+                                brandler gelecek
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="col-md-11">
+                    <div class=" ml-30 mr-30">
+                        <div id="alert">
+
+                        </div>
+                        <div class="table-content table-responsive">
+                            <div id="clothingList">
+                                @* _clothingList gelecek *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="row">
+
+            </div>*@
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            GetClothingListAll()
+
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Brand/GetBrandActive",
+                success: function (response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:52719/Admin/Clothing/GetBrandFilters",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(response),
+                        success: function (data) {
+                            $("#brandfilters").html(data)
+                        }
+                    })
+                }
+            })
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Category/GetCategoryActive",
+                success: function (response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:52719/Admin/Clothing/GetCategoryFilters",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(response),
+                        success: function (data) {
+                            $("#categoryfilters").html(data)
+                        }
+                    })
+                }
+            })
+        })
+        //Markalarına göre ürünleri listelemek için olusturdugum ajaxtır
+        function GetClothingByBrand(id) {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Clothing/GetClothingListBrand/" + id,
+                success: function (response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:52719/Admin/Clothing/GetClothingList",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(response),
+                        success: function (data) {
+                            $("#clothingList").html(data)
+                        }
+                    })
+                }
+            })
+        }
+        //Kategorisine göre ürünleri listelemek için olusturdugum ajaxtır
+        function GetClothingByCategory(cid) {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Clothing/GetClothingByCategory/" + cid,
+                success: function (response) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:52719/Admin/Clothing/GetClothingList",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(response),
+                        success: function (data) {
+                            $("#clothingList").html(data)
+                        }
+                    })
+                }
+            })
+        }
+        //Tüm ürünleri listelemek için oluşturdugum ajaxtır
+        function GetClothingListAll() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Clothing/GetClothing",
+                success: function (response) {
+                    console.log(response)
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:52719/Admin/Clothing/GetClothingList",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(response),
+                        success: function (data) {
+                            $("#clothingList").html(data)
+                        }
+                    })
+                }
+            })
+        }
+        function DeleteClothingById(clid) {
+            var cvp = confirm("Are you sure delete a clothing?")
+
+            if (cvp) {
+                $.ajax({
+
+                    type: "GET",
+                    url: "http://localhost:52607/api/Clothing/DeleteClothingById/" + clid,
+                    success: function (data) {
+                        if (cvp) {
+                            alert(data.message)
+                            location.reload();
+                        }
+                    }
+
+                })
+            }
+        }
+
+    </script>
+}
+

@@ -1,0 +1,16 @@
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.BLL.deps.json
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.BLL.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.BLL.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.csprojAssemblyReference.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.AssemblyInfoInputs.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.AssemblyInfo.cs
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.Core.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.DAL.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.Model.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.Core.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.DAL.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\bin\Debug\netcoreapp3.1\Peach.Model.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.BLL\obj\Debug\netcoreapp3.1\Peach.BLL.csproj.CopyComplete

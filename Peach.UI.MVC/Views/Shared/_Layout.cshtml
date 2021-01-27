@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Peach</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico">
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="~/css/animate.css">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="~/css/pe-icon-7-stroke.min.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css">
+    <!-- Image Zoom CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/css/img-zoom/jquery.simpleLens.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="~/css/meanmenu.min.css">
+    <!-- nivo slider CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/lib/css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="~/lib/css/preview.css" type="text/css" media="screen" />
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!-- header section start -->
+    <header class="pages-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-4">
+                        <div class="left-header clearfix">
+                            <ul>
+                                <li><p><i class="fa fa-phone" aria-hidden="true"></i>(+880) 1910 000251</p></li>
+                                <li class="hd-none"><p><i class="fa fa-clock-o" aria-hidden="true"></i>Mon-fri : 9:00-19:00</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-8">
+                        <div class="right-header" id="username">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom" id="sticky-menu">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 col-xs-4">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="index"><img src="~/img/logo2 .png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-md-10 col-xs-8 static">
+                        <div class="all-manu-area">
+                            <div class="mainmenu clearfix hidden-sm hidden-xs">
+                                <nav>
+                                    <ul>
+                                        <li><a asp-controller="Home" asp-action="About">About</a></li>
+                                        <li><a asp-controller="Home" asp-action="index">Home</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="right-header re-right-header">
+                                <ul>
+                                    <li id="cart-Btn">
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+   
+
+    @RenderBody()
+   
+    <!-- service section start -->
+    <section class="re-section-padding">
+        <div class="service section-padding">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="single-service">
+                            <i class="pe-7s-plane"></i>
+                            <h4>Free Shipping</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="single-service res-single">
+                            <i class="pe-7s-headphones"></i>
+                            <h4>Customer Support</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="single-service">
+                            <i class="pe-7s-refresh"></i>
+                            <h4>15 days money back</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service section end -->
+    <!-- footer section start -->
+    <footer class="re-footer-section">
+        <!-- footer-top area start -->
+        <div class="footer-top section-padding-top">
+            <div class="footer-dsc">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="single-text res-text">
+                                <div class="footer-title">
+                                    <h4>Contact us</h4>
+                                    <hr class="dubble-border" />
+                                </div>
+                                <div class="footer-text">
+                                    <ul>
+                                        <li>
+                                            <i class="pe-7s-map-marker"></i>
+                                            <p>My Company, 45 Puffin Street 1245</p>
+                                            <p class="rs">Poffinville France.</p>
+                                        </li>
+                                        <li>
+                                            <i class="pe-7s-call"></i>
+                                            <p>+201 (987) 6641 053</p>
+                                            <p>+202 (987) 6641 056</p>
+                                        </li>
+                                        <li>
+                                            <i class="pe-7s-mail-open"></i>
+                                            
+                                            <p>Peach.Proje@outlook.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="single-text res-text">
+                                <div class="footer-title">
+                                    <h4>my account</h4>
+                                    <hr class="dubble-border" />
+                                </div>
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                                        <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <hr class="dubble-border" />
+            </div>
+        </div>
+        <!-- footer-top area end -->
+        <!-- footer-bottom area start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p>©Copyright, 2018 All Rights Reserved by <a href="https://freethemescloud.com/">Free themes Cloud</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area end -->
+    </footer>
+    <!-- footer section end -->
+    <!-- all js here -->
+    <!-- jquery latest version -->
+    <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- parallax js -->
+    <script src="~/js/parallax.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!-- Img Zoom js -->
+    <script src="~/js/img-zoom/jquery.simpleLens.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="~/js/jquery.meanmenu.js"></script>
+    <!-- jquery.countdown js -->
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <!-- Nivo slider js
+    ============================================ -->
+    <script src="~/lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="~/lib/home.js" type="text/javascript"></script>
+    <!-- jquery-ui js -->
+    <script src="~/js/jquery-ui.min.js"></script>
+    <!-- sticky js -->
+    <script src="~/js/sticky.js"></script>
+    <!-- plugins js -->
+    <script src="~/js/plugins.js"></script>
+    <!-- main js -->
+    <script src="~/js/main.js"></script>
+    <script >
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Account/LoginName",
+                success: function (data) {
+                    $("#username").html(data);
+                }
+            })
+        })
+        function refreshBtn() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52719/cart/GetCartButton",
+                success: function (data) {
+                    $("#cart-Btn").html(data)
+                }
+
+            })
+        }
+        refreshBtn()
+        
+    </script>
+    @RenderSection("scripts", false)
+</body>
+</html>

@@ -1,0 +1,9 @@
+﻿@model List<CategoryVM>
+<h3 class="wg-title2">Categories</h3>
+
+<ul class="product-categories">
+    @foreach (CategoryVM item in Model)
+    {
+        <li class="cat-item"> <a href="#" onclick="GetClothingByCategory(@item.CategoryID)">@item.CategoryName</a></li>
+    }
+</ul>

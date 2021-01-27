@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Details</h2>
+                    <p><a href="#">Category</a> Category Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 ml-auto mr-auto">
+                <div id="alert">
+
+                </div>
+                <div class="table-content table-responsive">
+                    <div id="categoryList">
+                        @* _categoryList gelecek *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:52607/api/Category/GetCategory",
+            success: function (response) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:52719/Admin/Category/GetCategoryList",
+                    contentType: "application/json: charset=utf-8",
+                    data: JSON.stringify(response),
+                    success: function (data) {
+                        $("#categoryList").html(data);
+                    }
+                })
+            }
+        })
+    })
+    function DeleteCategory(categoryid) {
+
+        var cvp = confirm("Are you sure delete the category ?")
+
+        if (cvp) {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Category/DeleteCategoryById/" + categoryid,
+                success: function (data) {
+                    if (cvp) {
+                        alert(data.message)
+                        location.reload();
+
+                    }
+                }
+            });
+
+        }
+    }
+</script>
+}
+

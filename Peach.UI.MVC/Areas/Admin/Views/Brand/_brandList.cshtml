@@ -1,0 +1,41 @@
+﻿@model List<BrandVM>
+<table class="data-table cart-table">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th>CompanyName</th>
+            <th>Description</th>
+            <th>IsActive</th>
+            <th colspan="2"><button href="AddBrand.cshtml" class="btn btn-primary">Add</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (BrandVM item in Model)
+        {
+            <tr>
+                <td><span>@item.BrandId</span></td>
+                <td><span>@item.CompanyName</span></td>
+                <td><span>@item.Description</span></td>
+                <td><span>@item.IsActive</span></td>
+                <td>
+                    <a class="btn btn-info" asp-area="Admin" asp-controller="Brand" asp-action="Update" asp-route-id="@item.BrandId" type="submit">Update</a>
+                </td>
+                <td>
+                    @if (!item.IsActive)
+                    {
+                        <button href="#" style="border-style:none"  class="btn btn-warning" disabled onclick="DeleteBrand(@item.BrandId)">Delete</button>
+                    }
+                    else
+                    {
+                        <button style="border-style:none" href="#" class="btn btn-warning" onclick="DeleteBrand(@item.BrandId)">Delete</button>
+                    }
+
+
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

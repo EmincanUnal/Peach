@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+@model LoginVM
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Login</h2>
+                    <p><a href="#">Home</a> | Login</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+
+
+<!-- login content section start -->
+<div class="login-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2" >
+                <div class="tb-login-form ">
+                    <h5 class="tb-title">Login</h5>
+                    <p>Hello, Welcome to your account</p>
+                    <form asp-controller="Account" asp-action="Login" method="post">
+                        <p class="checkout-coupon top log a-an">
+                            <label class="l-contact">
+                                Email Address
+                                <em>*</em>
+                            </label>
+                            <input type="text" name="Email" placeholder="Please write Email">
+                        </p>
+                        <p class="checkout-coupon top-down log a-an">
+                            <label class="l-contact">
+                                Password
+                                <em>*</em>
+                            </label>
+                            <input type="password" name="Password" placeholder="Please write Password">
+                        </p>
+                        <p class="login-submit5">
+                            <button class="btn button-primary" type="submit" value="login"><span>Login</span></button>
+                        </p>
+                    </form>
+                    @if (ViewContext.ViewBag.Message != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewContext.ViewBag.Message
+                        </div>
+                    }
+                    <a asp-action="Register" asp-controller="Account" class="btn button-primary mt-30">New Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login  content section end -->

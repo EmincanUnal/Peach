@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Admin</h2>
+                    <p><a href="#">Admin</a> Home</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 myTable">
+            <h2>Welcome Admin</h2>
+            <table id="shopping-cart-table" class="data-table cart-table">
+                <thead>
+                    <tr>
+                        <th>Total User</th>
+                        <th>Total Clothing</th>
+                        <th>Total Brand</th>
+                        <th>Total Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="low1" id="totalUsers">0</td>
+                        <td class="low7" id="totalClothing">0</td>
+                        <td class="low7" id="totalBrand">0</td>
+                        <td class="low7" id="totalCategory">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        //Burda ajaxlarla oluşturdugumuz tablodaki sütünlerin verilerini basıyoruz 
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/User/Counter",
+                success: function (response) {
+                    $("#totalUsers").text(response)
+                }
+            })
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Brand/Counter",
+                success: function (response) {
+                    $("#totalBrand").text(response)
+                }
+            })
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Category/Counter",
+                success: function (response) {
+                    $("#totalCategory").text(response)
+                }
+            })
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Clothing/Counter",
+                success: function (response) {
+                    $("#totalClothing").text(response)
+                }
+            })
+
+        })
+    </script>
+}
+

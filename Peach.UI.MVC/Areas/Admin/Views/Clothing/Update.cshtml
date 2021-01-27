@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Update</h2>
+                    <p><a href="#">Clothing</a> Clothing Update</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div id="alert"></div>
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Brand Update</h3>
+                    <form asp-area="Admin" asp-controller="Product" asp-action="Update" class="form-group" method="post">
+                        <div class="checkbox-form">
+                            <div class="row">
+
+
+                                <div class="col-md-11">
+                                    <div class="product-details-img-content">
+                                        <div class="product-details-tab mr-40 mt-10">
+                                            <div>
+                                                <div id="pro-details1">
+                                                    <div>
+                                                        <img src="~/img/products/1.jpg" id="clothingUrl" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Update Form -->
+                    <div class="login-form" style="margin-bottom:30px">
+                        <form asp-area="Admin" asp-controller="Clothing" asp-action="Update">
+                                <div class="form-group">
+                                    <label>Clothing Image <span class="required">*</span></label>
+                                    <input type="file" id="clothingImg" onchange="ChangeImg()" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Fill in blank">
+                                </div>
+                                <div class="form-group">
+                                    <label>Stock</label>
+                                    <input type="text" id="stock" class="form-control" placeholder="Fill in blank">
+                                </div>
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <input type="text" id="price" class="form-control" placeholder="Fill in blank">
+                                </div>
+                                <div class="form-group">
+                                    <label>CompanyName</label>
+                                    <select id="companyname" class="form-control"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>CategoryName</label>
+                                    <select id="categoryname" class="form-control"></select>
+                                </div>
+                            </form>
+                        <button id="updatebtnclothing" type="submit" class="btn btn-primary mt-30">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{ 
+    <script>
+    $(document).ready(function ()
+    {
+        ChangeImg()
+        var id =@ViewContext.RouteData.Values["id"]
+           
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:52607/api/Category/GetCategoryActive",
+            success: function (response) {
+                for (var i = 0; i < response.length; i++) {
+
+                    $("#categoryname").append(new Option(response[i].categoryName, response[i].categoryID))
+                }
+            }
+        })
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:52607/api/Brand/GetBrandActive",
+            success: function (response) {
+                for (var i = 0; i < response.length; i++) {
+
+                    $("#companyname").append(new Option(response[i].companyName, response[i].brandID))
+                }
+            }
+        })
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:52607/api/Clothing/GetClothingById/" + id,
+            success: function (data) {
+                $("#clothingUrl").attr("src", "" + data.clothingArtUrl)
+                $("#name").val(data.name);
+                $("#stock").val(data.stock);
+                $("#price").val(data.price);
+                $("#companyname").val(data.brandID);
+                $("#categoryname").val(data.categoryID);
+            }
+        })
+        $("#updatebtnclothing").click(function () {
+            var clothing = new Object();
+            clothing.ClothingID =@ViewContext.RouteData.Values["id"];
+            var formData = new FormData();
+            formData.append('file', $("#clothingImg")[0].files[0])
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:52719/Admin/Clothing/AddClothingImg",
+                data: formData,
+                dataType: "json",
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    if (data.imgUrl != "/img/products/") {
+                        clothing.ClothingArtUrl = data.imgUrl;
+                    }
+                    clothing.Name = $("#name").val();
+                    clothing.Stock = parseInt($("#stock").val());
+                    clothing.Price = parseFloat($("#price").val());
+                    clothing.BrandID = parseInt($("#companyname").val());
+                    clothing.CategoryID = parseInt($("#categoryname").val());
+                    console.log(data)
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:52607/api/Clothing/UpdateClothing",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(clothing),
+                        success: function (data) {
+                            if (data.check == true) {
+                                $("#alert").html("<div class='alert alert-success' role='alert'>" + data.message + "</div>")
+
+                            } else {
+                                $("#alert").html("<div class='alert alert-danger' role='alert'>" + data.message + "</div>")
+                            }
+                        }
+                    })
+                }
+            })
+        })
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+    function ChangeImg() {
+        var picture = document.getElementById("clothingImg");
+        var image = document.getElementById("clothingUrl");
+
+        if (picture.files && picture.files[0]) {
+            var data = new FileReader();//veri okuma apisi başlatıyoruz.
+
+            data.onload = function () {//Okuma işlemi tamamlandıgında alltaki  readAsDataURL ile verileri okuyoruz
+
+                var address = data.result;//veriyi alıyrouz
+                image.src = address
+
+            }
+            data.readAsDataURL(picture.files[0]);// burada veriyi okuyoruz
+        }
+
+    }
+    </script>
+}
+

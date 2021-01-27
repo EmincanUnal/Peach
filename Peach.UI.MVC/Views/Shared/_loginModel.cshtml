@@ -1,0 +1,17 @@
+﻿@model string
+@if (!string.IsNullOrEmpty(Model))
+{
+    <ul>
+        <li><a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-cart"></i>My cart</a></li>
+        <li><a asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i>@Model</a></li>
+        <li><a asp-controller="Account" asp-action="Logout"><i class="glyphicon glyphicon-off "></i>Logout</a></li>
+    </ul>
+}
+else
+{
+    <ul>
+        <li><a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-cart"></i>My cart</a></li>
+        <li><a asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i>Login</a></li>
+        <li><a asp-controller="Account" asp-action="Register"><i class="fa fa-user"></i>Register</a></li>
+    </ul>
+}

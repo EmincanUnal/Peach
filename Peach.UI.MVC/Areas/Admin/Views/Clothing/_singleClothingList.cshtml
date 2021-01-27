@@ -1,0 +1,52 @@
+﻿@model List<ClothingVM>
+<table class="data-table cart-table">
+    <thead>
+        <tr>
+            <th> Image</th>
+            <th>Name</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>CompanyName</th>
+            <th>CategoryName</th>
+            <th>Continued</th>
+            <th>Discount</th>
+            <th>CreatedDate</th>
+            <th>İsActive</th>
+            <th colspan="2"><button class="btn btn-primary">Add</button></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ClothingVM item in Model)
+        {
+        <tr>
+            <td><img src="../..@item.ClothingArtUrl" alt="" style="width:20px ;height:30px" /></td>
+            <td><span>@item.Name</span></td>
+            <td><span>@item.Stock</span></td>
+            <td><span>@item.Price</span></td>
+            <td><span>@item.CompanyName</span></td>
+            <td><span>@item.CategoryName</span></td>
+            <td><span>@item.Continued</span></td>
+            <td><span>@item.DisCounted</span></td>
+            <td><span>@item.CreatedDate</span></td>
+            <td><span>@item.IsActive</span></td>
+            <td>
+                <a class="btn btn-info" asp-area="Admin" asp-controller="Clothing" asp-action="Update" asp-route-id="@item.ClothingID" type="submit">Update</a>
+            </td>
+            <td>
+                @if (!item.IsActive)
+                {
+                    <button href="#" style="border-style:none" disabled class="btn btn-warning" onclick="DeleteClothingById (@item.ClothingID)">Delete</button>
+                }
+                else
+                {
+                    <button style="border-style:none" href="#" class="btn btn-warning" onclick="DeleteClothingById(@item.ClothingID)">Delete</button>
+                }
+
+
+
+            </td>
+        </tr>
+
+        }
+    </tbody>
+</table>

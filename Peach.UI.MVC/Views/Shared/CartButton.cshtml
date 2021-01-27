@@ -1,0 +1,38 @@
+﻿@model MyCart
+
+<li>
+    <a href="cart.html"><i class="fa fa-shopping-cart"></i><span class="color1">@Model.GetCount</span></a>
+
+    <ul class="drop-cart">
+        @foreach (Cartİtem item in Model.GetAllCartItem)
+        {
+            <li>
+                <a href="cart.html"><img src="@item.ClothesArtUrl" alt="" style="width:43px ;height:60px" /></a>
+                <div class="add-cart-text">
+                    <p><a href="#">@item.Name</a></p>
+                    <p>@item.Price ₺ </p>
+                    <p> Adet= @item.Amount </p>
+                    <p>@item.SubTotal</p>
+                </div>
+                <div class="pro-close">
+                    <i class="pe-7s-close"></i>
+                </div>
+            </li>
+        }
+        @{ 
+            decimal total = 0;
+            foreach (Cartİtem item in Model.GetAllCartItem)
+            {
+                total += item.SubTotal;
+            }
+
+    <li class="total-amount clearfix">
+            <span class="floatleft">total</span>
+            <span class="floatright"><strong>= @total</strong></span>
+    </li>
+        }
+        <li class="checkout-btn text-center">
+            <a asp-controller="Cart" asp-action="Index"><strong>go to cart &nbsp;<i class="pe-7s-angle-right"></i></strong></a>
+        </li>
+    </ul>
+</li>

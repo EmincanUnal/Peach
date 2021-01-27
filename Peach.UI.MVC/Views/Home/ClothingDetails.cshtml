@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewData["Title"] = "ClothingDetails";
+}
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Details</h2>
+                    <p><a href="#">Home</a> Clothing Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div class="col-lg-8 col-lg-offset-2 MyBorder" style="margin-top:50px ;margin-bottom:50px">
+    <div class="row">
+        <div class="col-lg-5 ">
+            <div class="quick-image">
+                <div class="single-quick-image tab-content text-center">
+                    <div class="tab-pane  fade in active" id="sin-pro-1">
+                        <img id="imageurl" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="col-lg-12">
+                <div class="quick-right-text">
+                    <h3><strong id="name"></strong></h3>
+                    <div class="amount">
+                        <h4 id="price">Fiyat :</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <label>Stock :<span id="quantity"></span></label>
+            </div>
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    <label> How many :</label>
+                </div>
+                <div class="col-lg-6">
+                    <input id="adet" type="number" />
+                </div>
+
+
+            </div>
+            <div class="col-lg-12">
+                <div class="por-dse add-to">
+                    <a href="#" onclick="AddToMyCart()">add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@section scripts{
+    <script>
+        
+        $(document).ready(function () {
+            refreshBtn()
+        var id =@ViewContext.RouteData.Values["id"];
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:52607/api/Clothing/GetClothingByID/" + id,
+            success: function (data) {
+                $("#imageurl").attr("src", data.clothingArtUrl);
+                $("#price").append(data.price + " ₺");
+                $("#name").text(data.name);
+                $("#quantity").text(data.stock)
+
+            }
+        })
+    })
+
+
+
+
+            function AddToMyCart() {
+                var id =@ViewContext.RouteData.Values["id"];
+                var amount = $("#adet").val();
+                if (amount>0) {
+                    $.ajax({
+                        type: "GET",
+                        url: "http://localhost:52607/api/Clothing/GetCartItemByID/" + id,
+                        async: false,
+                        success: function (data) {
+                            $.ajax({
+                                type: "POST",
+                                url: "../../Cart/AddToCart?amount=" + amount,
+                                contentType: "application/json; charset=utf-8 ",
+                                data: JSON.stringify(data),
+                                success: function () {
+                                    alert("Sepete ürün eklendi")
+                                    refreshBtn()
+                                }
+
+                            });
+                        }
+                    });
+                }
+                else {
+                    alert("En az bir ürün girilmelidir")
+                }
+
+
+            }
+    </script>
+
+
+}

@@ -1,0 +1,89 @@
+﻿@model List<CategoryVM>
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Update</h2>
+                    <p><a href="#">Category</a> Category Update</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div id="alert"></div>
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>CategoryUpdate</h3>
+                    <!-- Update Form -->
+                    <div class="login-form" style="margin-bottom:30px">
+                        <form>
+                            <div class="form-group">
+                                <label>CategoryName</label>
+                                <input type="text" id="CategoryName" class="form-control" placeholder="Fill in blank">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" id="Description" class="form-control" placeholder="Fill in blank">
+                            </div>
+                            <div class="form-group">
+                                <label>IsActive</label>
+                                <input type="checkbox" id="IsActive">
+                            </div>
+                        </form>
+                        <button onclick="updatebtncategory()" type="submit" class="btn btn-primary mt-30">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{ 
+    <script>
+    $(document).ready(function () {
+        var id =@ViewContext.RouteData.Values["id"]
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:52607/api/Category/GetCategoryByID/" + id,
+                success: function (response) {
+                    console.log(response)
+                    $("#CategoryName").val(response.categoryName);
+                    $("#Description").val(response.description);
+                    $("#IsActive").attr('checked', response.isActive);
+                }
+            })
+    })
+        function updatebtncategory() {
+            var checkBox = document.getElementById("IsActive");
+            var category = new Object();
+            category.CategoryID =@ViewContext.RouteData.Values["id"];
+            category.CategoryName = $("#CategoryName").val();
+            category.Description = $("#Description").val();
+            category.IsActive = checkBox.checked;
+            console.log(category)
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:52607/api/Category/UpdateCategory",
+                data: JSON.stringify(category),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    if (response.check == true) {
+                        $("#alert").html("<div class='alert alert-success' role='alert'>" + data.message + "</div>")
+                    } else {
+                        $("#alert").html("<div class='alert alert-danger' role='alert'>" + data.message + "</div>")
+                    }
+                }
+            })
+        }
+    </script>
+}

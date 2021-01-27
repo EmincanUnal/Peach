@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Peach</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico">
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
+    <!-- all css here -->
+    <!-- bootstrap v3.3.6 css -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- animate css -->
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <!-- pe-icon-7-stroke -->
+    <link href="~/css/pe-icon-7-stroke.min.css" rel="stylesheet" />
+    <!-- jquery-ui.min css -->
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <!-- Image Zoom CSS
+    ============================================ -->
+    <link href="~/css/img-zoom/jquery.simpleLens.css" rel="stylesheet" />
+    <!-- meanmenu css -->
+    <link href="~/css/meanmenu.min.css" rel="stylesheet" />
+    <!-- nivo slider CSS
+    ============================================ -->
+    <link href="~/lib/css/nivo-slider.css" rel="stylesheet" />
+    <link href="~/lib/css/preview.css" rel="stylesheet" />
+    <!-- owl.carousel css -->
+    <link href="~/css/owl.carousel.css" rel="stylesheet" />
+    <!-- font-awesome css -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- style css -->
+    <link href="~/style.css" rel="stylesheet" />
+    <!-- responsive css -->
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <!-- modernizr css -->
+    <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!-- header section start -->
+    <header class="pages-header">
+        <div class="header-bottom" id="sticky-menu">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-sm-2 col-md-2 col-xs-4">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="index"><img src="~/img/logo2 .png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-md-10 col-xs-8 static">
+                        <div class="all-manu-area">
+                            <div class="mainmenu clearfix hidden-sm hidden-xs">
+                                <nav>
+                                    <ul>
+                                        <li><a asp-area="Admin" asp-controller="Management" asp-action="index">Home</a></li>
+                                        <li>
+                                            <a asp-area="Admin" asp-controller="Brand" asp-action="Index"> Brand</a>
+                                            <ul>
+                                                <li><a asp-area="Admin" asp-controller="Brand" asp-action="AddBrand">Add Brand</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Admin" asp-controller="Clothing" asp-action="Index"> Clothing</a>
+                                            <ul>
+                                                <li><a asp-area="Admin" asp-controller="Clothing" asp-action="AddClothing">Add Clothing</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                            <ul>
+                                                <li><a asp-area="Admin" asp-controller="Category" asp-action="AddCategory">Add Category</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a asp-area="" asp-controller="Account" asp-action="Logout" >Log Out</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    @RenderBody()
+    <!-- all js here -->
+    <!-- jquery latest version -->
+    <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- parallax js -->
+    <script src="~/js/parallax.min.js"></script>
+    <!-- owl.carousel js -->
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!-- Img Zoom js -->
+    <script src="~/js/img-zoom/jquery.simpleLens.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="~/js/jquery.meanmenu.js"></script>
+    <!-- jquery.countdown js -->
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <!-- Nivo slider js
+    ============================================ -->
+    <script src="~/lib/js/jquery.nivo.slider.js"></script>
+    <script src="~/lib/home.js"></script>>
+    <!-- jquery-ui js -->
+    <script src="~/js/jquery-ui.min.js"></script>
+    <!-- sticky js -->
+    <script src="~/js/sticky.js"></script>
+    <!-- plugins js -->
+    <script src="~/js/plugins.js"></script>
+    <!-- main js -->
+    @RenderSection("scripts", false)
+</body>
+</html>

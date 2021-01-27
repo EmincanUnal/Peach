@@ -1,0 +1,115 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\animate.css" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\font-awesome.min.css" />
+    <Content Remove="wwwroot\css\img-zoom\jquery.simpleLens.css" />
+    <Content Remove="wwwroot\css\jquery-ui.min.css" />
+    <Content Remove="wwwroot\css\meanmenu.min.css" />
+    <Content Remove="wwwroot\css\owl.carousel.css" />
+    <Content Remove="wwwroot\css\pe-icon-7-stroke.min.css" />
+    <Content Remove="wwwroot\css\responsive.css" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.eot" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.svg" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <Content Remove="wwwroot\fonts\FontAwesome.otf" />
+    <Content Remove="wwwroot\fonts\Pe-icon-7-stroke.woff" />
+    <Content Remove="wwwroot\img\products\grid-icon.png" />
+    <Content Remove="wwwroot\img\products\list-icon.png" />
+    <Content Remove="wwwroot\img\favicon.ico" />
+    <Content Remove="wwwroot\img\icon-img\44.png" />
+    <Content Remove="wwwroot\img\icon-img\email.jpg" />
+    <Content Remove="wwwroot\img\icon-img\facebook.png" />
+    <Content Remove="wwwroot\img\icon-img\googleplus.jpg" />
+    <Content Remove="wwwroot\img\icon-img\pinterest.jpg" />
+    <Content Remove="wwwroot\img\icon-img\screenshot_2.png" />
+    <Content Remove="wwwroot\img\icon-img\stars-1.png" />
+    <Content Remove="wwwroot\img\icon-img\twitter.png" />
+    <Content Remove="wwwroot\img\link-angle.png" />
+    <Content Remove="wwwroot\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\js\img-zoom\jquery.simpleLens.min.js" />
+    <Content Remove="wwwroot\js\jquery-ui.min.js" />
+    <Content Remove="wwwroot\js\jquery.countdown.min.js" />
+    <Content Remove="wwwroot\js\jquery.meanmenu.js" />
+    <Content Remove="wwwroot\js\main.js" />
+    <Content Remove="wwwroot\js\owl.carousel.min.js" />
+    <Content Remove="wwwroot\js\parallax.min.js" />
+    <Content Remove="wwwroot\js\plugins.js" />
+    <Content Remove="wwwroot\js\sticky.js" />
+    <Content Remove="wwwroot\js\vendor\jquery-1.12.0.min.js" />
+    <Content Remove="wwwroot\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Remove="wwwroot\lib\css\nivo-slider.css" />
+    <Content Remove="wwwroot\lib\css\preview.css" />
+    <Content Remove="wwwroot\lib\home.js" />
+    <Content Remove="wwwroot\lib\js\jquery.nivo.slider.js" />
+    <Content Remove="wwwroot\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\animate.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\img-zoom\jquery.simpleLens.css" />
+    <None Include="wwwroot\css\jquery-ui.min.css" />
+    <None Include="wwwroot\css\meanmenu.min.css" />
+    <None Include="wwwroot\css\owl.carousel.css" />
+    <None Include="wwwroot\css\pe-icon-7-stroke.min.css" />
+    <None Include="wwwroot\css\responsive.css" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\Pe-icon-7-stroke.woff" />
+    <None Include="wwwroot\img\products\grid-icon.png" />
+    <None Include="wwwroot\img\products\list-icon.png" />
+    <None Include="wwwroot\img\favicon.ico" />
+    <None Include="wwwroot\img\icon-img\44.png" />
+    <None Include="wwwroot\img\icon-img\email.jpg" />
+    <None Include="wwwroot\img\icon-img\facebook.png" />
+    <None Include="wwwroot\img\icon-img\googleplus.jpg" />
+    <None Include="wwwroot\img\icon-img\pinterest.jpg" />
+    <None Include="wwwroot\img\icon-img\screenshot_2.png" />
+    <None Include="wwwroot\img\icon-img\stars-1.png" />
+    <None Include="wwwroot\img\icon-img\twitter.png" />
+    <None Include="wwwroot\img\link-angle.png" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\img-zoom\jquery.simpleLens.min.js" />
+    <None Include="wwwroot\js\jquery-ui.min.js" />
+    <None Include="wwwroot\js\jquery.countdown.min.js" />
+    <None Include="wwwroot\js\jquery.meanmenu.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\owl.carousel.min.js" />
+    <None Include="wwwroot\js\parallax.min.js" />
+    <None Include="wwwroot\js\plugins.js" />
+    <None Include="wwwroot\js\sticky.js" />
+    <None Include="wwwroot\js\vendor\jquery-1.12.0.min.js" />
+    <None Include="wwwroot\js\vendor\modernizr-2.8.3.min.js" />
+    <None Include="wwwroot\lib\css\nivo-slider.css" />
+    <None Include="wwwroot\lib\css\preview.css" />
+    <None Include="wwwroot\lib\home.js" />
+    <None Include="wwwroot\lib\js\jquery.nivo.slider.js" />
+    <None Include="wwwroot\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Peach.BLL\Peach.BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+  </ItemGroup>
+
+</Project>

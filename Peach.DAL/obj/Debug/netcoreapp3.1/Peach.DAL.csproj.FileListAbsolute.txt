@@ -1,0 +1,17 @@
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.Core.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.Model.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.csprojAssemblyReference.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.AssemblyInfoInputs.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.AssemblyInfo.cs
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.DAL.deps.json
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.DAL.runtimeconfig.json
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.DAL.runtimeconfig.dev.json
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.DAL.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.DAL.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.Model.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\bin\Debug\netcoreapp3.1\Peach.Core.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.csproj.CopyComplete
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.DAL\obj\Debug\netcoreapp3.1\Peach.DAL.genruntimeconfig.cache

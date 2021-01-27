@@ -1,0 +1,7 @@
+﻿@model List<CategoryVM>
+    <li><a data-toggle="tab" href="#" onclick="getclothinglistall()">AllShops</a></li>
+@foreach (CategoryVM item in Model)
+{
+    <li><a data-toggle="tab" href="#" onclick="GetCategory(@item.CategoryID)"> @item.CategoryName</a></li>
+    
+}

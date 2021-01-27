@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "AddBrand";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*---- İmage area-- *@
+<div class="contact-img-area" style="background-size:cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Added</h2>
+                    <p><a href="#">Brand</a> Brand Added</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*---- İmage area-- *@
+<div id="alert"></div>
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Brand Added</h3>
+                    <!--  Form -->
+                    <div class="login-form" style="margin-bottom:30px">
+                        <form>
+                            <div class="form-group">
+                                <label>CompanyName</label>
+                                <input type="text" id="CompanyName" class="form-control" placeholder="Fill in blank">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text" id="Description" class="form-control" placeholder="Fill in blank">
+                            </div>
+                        </form>
+                        <button id="btnaddbrand" type="submit" class="btn btn-primary mt-30">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{ 
+<script>
+    $("#btnaddbrand").click(function () {
+        var brand = new Object();
+        brand.CompanyName = $("#CompanyName").val();
+        brand.Description = $("#Description").val();
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:52607/api/Brand/AddBrand",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(brand),
+            success: function (data) {
+                if (data.check ) {
+                    $("#alert").html("<div class='alert alert-success' role='alert'>" + data.message + "</div>")
+                } else {
+                    $("#alert").html("<div class='alert alert-danger' role='alert'>" + data.message + "</div>")
+                }
+            }
+        })
+    })
+</script>
+}

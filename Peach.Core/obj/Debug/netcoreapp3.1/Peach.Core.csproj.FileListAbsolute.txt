@@ -1,0 +1,9 @@
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\bin\Debug\netcoreapp3.1\Peach.Core.deps.json
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\bin\Debug\netcoreapp3.1\Peach.Core.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\bin\Debug\netcoreapp3.1\Peach.Core.pdb
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\obj\Debug\netcoreapp3.1\Peach.Core.csprojAssemblyReference.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\obj\Debug\netcoreapp3.1\Peach.Core.AssemblyInfoInputs.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\obj\Debug\netcoreapp3.1\Peach.Core.AssemblyInfo.cs
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\obj\Debug\netcoreapp3.1\Peach.Core.csproj.CoreCompileInputs.cache
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\obj\Debug\netcoreapp3.1\Peach.Core.dll
+C:\Users\Emincan\source\repos\Peach-Proje\Peach.Core\obj\Debug\netcoreapp3.1\Peach.Core.pdb
