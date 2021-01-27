@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\Peach.Model.csproj": {}
+    "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\Peach.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj": {
+    "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj",
         "projectName": "Peach.Core",
-        "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj",
+        "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj",
         "packagesPath": "C:\\Users\\Emincan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\obj\\",
+        "outputPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Emincan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\Peach.Model.csproj": {
+    "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\Peach.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\Peach.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\Peach.Model.csproj",
         "projectName": "Peach.Model",
-        "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\Peach.Model.csproj",
+        "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\Peach.Model.csproj",
         "packagesPath": "C:\\Users\\Emincan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\obj\\",
+        "outputPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Emincan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj": {
-                "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj"
+              "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj": {
+                "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj"
               }
             }
           }

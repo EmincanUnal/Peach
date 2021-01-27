@@ -11,7 +11,7 @@ namespace Peach.DAL.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("User ID=postgres; Password=e010203,e; Server=localhost; DataBase=PeachDB");
+            optionsBuilder.UseNpgsql("User ID=postgres; Password=..........; Server=localhost; DataBase=PeachDB");
             base.OnConfiguring(optionsBuilder);
         }
         public DbSet<Clothing> Clothings { get; set; }

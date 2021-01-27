@@ -6663,11 +6663,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.UI.MVC\\Peach.UI.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.UI.MVC\\Peach.UI.MVC.csproj",
       "projectName": "Peach.UI.MVC",
-      "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.UI.MVC\\Peach.UI.MVC.csproj",
+      "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.UI.MVC\\Peach.UI.MVC.csproj",
       "packagesPath": "C:\\Users\\Emincan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.UI.MVC\\obj\\",
+      "outputPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.UI.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emincan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6684,8 +6684,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj": {
-              "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj"
+            "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj": {
+              "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj"
             }
           }
         }

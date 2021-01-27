@@ -20,7 +20,7 @@ namespace Peach.UI.MVC.Helper
             SmtpClient client = new SmtpClient("smtp.office365.com", 587);
             client.EnableSsl = true;
             client.UseDefaultCredentials = true;
-            NetworkCredential credential = new NetworkCredential("Peach.Proje@outlook.com", "e010203,e");
+            NetworkCredential credential = new NetworkCredential("BurayaMailYazılcak@outlook.com", "......");
             client.Credentials = credential;
             try
             {

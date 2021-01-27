@@ -745,11 +745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj",
       "projectName": "Peach.BLL",
-      "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj",
+      "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.BLL\\Peach.BLL.csproj",
       "packagesPath": "C:\\Users\\Emincan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.BLL\\obj\\",
+      "outputPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emincan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -766,14 +766,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj": {
-              "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Core\\Peach.Core.csproj"
+            "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj": {
+              "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Core\\Peach.Core.csproj"
             },
-            "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.DAL\\Peach.DAL.csproj": {
-              "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.DAL\\Peach.DAL.csproj"
+            "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.DAL\\Peach.DAL.csproj": {
+              "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.DAL\\Peach.DAL.csproj"
             },
-            "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\Peach.Model.csproj": {
-              "projectPath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Model\\Peach.Model.csproj"
+            "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\Peach.Model.csproj": {
+              "projectPath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Model\\Peach.Model.csproj"
             }
           }
         }

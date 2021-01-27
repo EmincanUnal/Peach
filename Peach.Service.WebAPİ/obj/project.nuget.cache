@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CPmTU16QL9USt5vYSptZUZULfEt2UowpK8MjsnR++mnAr82LPsOLURCmJLiscfVvPjkRKzIcViLcpfpiB5yeUA==",
+  "dgSpecHash": "UX6wNyt0JztlzGMQwRt8s9UZjABwYhDjIev0kOIKS8tAKM0c+SxvNG/hUK0mK/bDbO2AU672QmaDCo7MTk+7ZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.Service.WebAPİ\\Peach.Service.WebAPİ.csproj",
+  "projectFilePath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.Service.WebAPİ\\Peach.Service.WebAPİ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emincan\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.1\\microsoft.entityframeworkcore.5.0.1.nupkg.sha512",
     "C:\\Users\\Emincan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.1\\microsoft.entityframeworkcore.abstractions.5.0.1.nupkg.sha512",

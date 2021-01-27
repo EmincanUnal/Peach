@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1WE63+qA0Lw/ou9FgJqBxF/V70U/lB+CTWzSOdilYq6YPLl9CnL7jOERxV/qSYocszWQrFbrgzJWweGdiIPBAg==",
+  "dgSpecHash": "bQ6fJkJ9z7GJEFEPxAabQegNdPnIGQmfCV5lp3lNj65c+E1LD5ruK8eRbap3fQHuOnrTBHZat3WVXpFP/3gFWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emincan\\source\\repos\\Peach-Proje\\Peach.UI.MVC\\Peach.UI.MVC.csproj",
+  "projectFilePath": "C:\\Users\\Emincan\\Desktop\\Github\\Peach-Proje\\Peach.UI.MVC\\Peach.UI.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emincan\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Emincan\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
